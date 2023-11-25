@@ -1,0 +1,30 @@
+{% extends "base/base.html" %}
+
+{% block titulo %}
+
+
+<header style="text-align: center;">
+    <h1>Editar Perfil</h1>    
+</header>
+
+
+{% endblock %}
+
+
+
+
+{% block cuerpo %}
+
+<body>
+    
+    <form action="" method="post" enctype="multipart/form-data">
+
+        {% csrf_token %}
+        {{form.as_p}}
+
+        <button type="submit">Editar</button>
+    </form>
+
+</body>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base/base.html" %}
+
+{% block cuerpo %}
+
+  <h1>{{ articulos.Titulo }}</h1>
+  {% if articulo.Imagen %}
+  <img src="{{ articulos.Imagen.url }}" alt="{{ articulo.Titulo }}">
+  {% endif %}
+  <h2>{{ articulos.Subtitulo }}</h2>
+  <p>{{ articulos.Contenido }}</p>
+  <p>Autor: {{ articulos.Autor }}</p>
+  <p>Fecha: {{ articulos.Fecha }}</p>
+
+  {% if user.is_authenticated %}
+    {% if user == articulos.Autor or user.is_superuser %}
+    <a href="{% url 'Editar' pk=articulos.pk %}">Editar artículo</a>
+    <a href="{% url 'Borrar' pk=articulos.pk %}">Eliminar artículo</a>
+    {% endif %}
+  {% endif %}
+{% endblock %}

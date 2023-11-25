@@ -1,0 +1,20 @@
+{% extends "base/base.html" %}
+
+{% block cuerpo %}
+  <h1>Lista de Artículos</h1>
+
+  {% if articulos_list %}
+    {% for articulo in articulos_list %}
+      <div>
+        <h2>{{ articulo.Titulo }}</h2>
+        {% if articulo.Imagen %}
+        <img src="{{ articulo.Imagen.url }}" alt="{{ articulo.Titulo }}">
+        {% endif %}
+        <p>{{ articulo.Subtitulo }}</p>
+        <a href="{% url 'Detalles' pk=articulo.pk %}">Ver artículo</a>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>No hay artículos disponibles.</p>
+  {% endif %}
+{% endblock %}

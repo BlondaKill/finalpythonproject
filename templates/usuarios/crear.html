@@ -1,0 +1,30 @@
+{% extends "base/base.html" %}
+
+{% block titulo %}
+
+
+<header style="text-align: center;">
+    <h1>Crear Usuario</h1>    
+</header>
+
+
+{% endblock %}
+
+
+
+
+{% block cuerpo %}
+
+<body>
+    
+    <form action="" method="post" enctype="multipart/form-data">
+
+        {% csrf_token %}
+        {{form.as_p}}
+
+        <button type="submit">Crear</button>
+    </form>
+
+</body>
+
+{% endblock %}

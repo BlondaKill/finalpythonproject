@@ -1,0 +1,51 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block titulo %}
+
+
+<header style="text-align: center;">
+    <img src="{% static 'assets/Yo.jpg' %}" alt="">
+    <h1>LAURA MORALES</h1>
+    <h2>Full Stack Developer</h2> 
+    
+</header>
+
+
+{% endblock %}
+
+
+
+
+{% block cuerpo %}
+
+<body style="text-align: center;">
+
+    <div class="container-fluid contact" style="text-align: center;">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 infocontacto">
+                <div>  
+                    <h2>Contáctame</h2>
+                    <p><strong>Dirección:</strong> Piedras 1497, Buenos Aires<br>CP 1140, Argentina</p>
+                    <p><strong>Celular:</strong> <a href="tel:+5491153150461">+54 9 11 5315 0461</a></p>
+                    <p><strong>E-mail:</strong> <a href="mailto:info@laura-morales.com.ar">info@laura-morales.com.ar</a></p>
+                </div>
+                <a href="https://www.facebook.com/AGENCIA-DE-PROMOTORAS-Y-MODELOS-LAURA-MORALES-333173767406/" title="facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <span style="margin-right: 15px;"></span> 
+                <a href="https://twitter.com/agciapromotoras" title="twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <span style="margin-right: 15px;"></span> 
+                <a href="https://www.instagram.com/lm_promotorasymodelos/" title="instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
+     
+</body>
+
+{% endblock %}
