@@ -1,4 +1,4 @@
-# ProyectoCoder
+# Proyecto Python Lau Blog
 
 ## Instrucciones instalar proyecto en local
 
@@ -15,8 +15,6 @@ pip install -r requirements.txt
 ## Instrucciones para entrar al panel aministrativo de Django
 
 * En consola, crear un superuser:
-* 
-* En consola, crear un superuser:
 
 ```
 python manage.py createsuperuser
@@ -24,7 +22,10 @@ python manage.py createsuperuser
 
 * Acceder con user y password via:
 
+```
 127.0.0.1:8000/admin
+```
+
 
 # Superusuario de pruebas
 
@@ -33,5 +34,3 @@ username:admin contraseña:1234abcd
 # Usuarios normales
 
 puka, blondakill, puka2, Laura
-
-* Superusuario de pruebas
